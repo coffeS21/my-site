@@ -1,0 +1,85 @@
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+}
+/*207, 69, 69, 0.4 #f95656 KumbaSketchRegularItalic.ttf   #56CBF9  rgb(159,156,161)*/
+    @font-face{
+        font-family: headerFont;
+        src:url("../fonts/colored pencils.ttf");
+}
+
+/* @media(width <= 480px){ */
+    #backgroundContainer{
+        background-image: url("../img/joanna-kosinska-1_CMoFsPfso-unsplash.jpg");
+        background-size: cover;
+        background-position: 20%;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-right:10px;
+    }
+    #headerContainer{
+        font-family: headerFont;
+        font-size: 12px;
+        color: rgb(84, 82, 85);
+        text-shadow: 0px 3px 5px rgb(255, 255, 255); 
+        padding-top: 30px;
+   }
+   #nameContainer{
+        font-family: headerFont;
+        font-size: 23px;
+        color: rgb(159,156,161);
+        text-shadow: 1px 3px 3px rgb(0, 0, 0);
+        padding-bottom: 30px;
+   }
+   #stickyNote{
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color:rgb(119, 230, 29);
+        box-shadow: 2px 3px  11px #000000;
+        transform: rotate(-14deg);
+        padding-top:6px;
+        padding-bottom: 36px;
+        padding-left:8px;
+        padding-right:8px;
+        font-family: headerFont;
+        font-size: 32px;
+        color: rgb(84, 82, 85);
+   }
+   #stickyNote h6{
+    border-bottom: 3px solid rgb(84, 82, 85);
+   }
+
+    a span {
+        background:rgb(159,156,161); 
+        display: block;
+        padding: 5px 15px;
+        border-radius: 5px;
+        border: 2px solid #000;
+    }
+    a {
+        position: relative;
+        float: left;
+        font-family: headerFont;
+        margin-right: 10px;
+        text-transform: uppercase;
+        transform: rotateZ(-6deg);
+        color: #000;
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 #000;
+        transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
+        background-image: url('data:image/gif;base64,R0lGODlhBAAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NUY1OENCRDdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NUY1OENCRTdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk1RjU4Q0JCN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk1RjU4Q0JDN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAQABAAAAgYEEpdoeQUAOw==');
+    }
