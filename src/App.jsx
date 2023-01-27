@@ -1,10 +1,11 @@
 import React from "react"
-import LandingPageDisplay from "./displayComponents/LandingPageDisplay.jsx"
-
+// import LandingPageDisplay from "./displayComponents/LandingPageDisplay.jsx"
+import ContactForm from "./components/appComponents/ContactForm"
 export default function App(props) {
     return(
         <div>
-            <LandingPageDisplay/>
+            {/* <LandingPageDisplay/> */}
+            <ContactForm/>
         </div>
     )
 }
