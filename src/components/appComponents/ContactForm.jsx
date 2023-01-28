@@ -1,6 +1,6 @@
 import React, {useRef} from "react"
 import emailjs from '@emailjs/browser'
-
+import Button from "./Button"
 export default function ContactForm(props){
     const form = useRef()
 
@@ -20,16 +20,21 @@ export default function ContactForm(props){
     return(
         <div>
              <form ref={form} onSubmit={sendEmail}>
+
+              <div>
                 <input
                 type="text"
-                placeholder="co name"
                 name="company"
+                className="formInput"
                 />
-                <input
+                 <input
                 type="text"
-                placeholder="name"
                 name="name"
-                />
+                className="formInput"
+                /> 
+              </div>
+
+              {/* <div>
                 <input
                 type="email"
                 placeholder="email"
@@ -41,12 +46,17 @@ export default function ContactForm(props){
                 name="phone"
                 placeholder="phone number"
                 />
+              </div>
+
+              <div>
                 <textarea
                 type="text"
                 name="message"
                 placeholder="message"
                 />
-                <button>submit</button>
+                <Button buttonText="submit"/>
+              </div> */}
+
              </form>
         </div>
     )

@@ -1,5 +1,5 @@
 import React from "react"
-import  "../styles/cssFiles/landingPageDisplay.css"
+import  "../styles/cssFiles/landingPage.css"
 import Header from "../components/appComponents/Header"
 import SubHeader from "../components/appComponents/SubHeader"
 import StickyNote from "../components/appComponents/StickyNote"

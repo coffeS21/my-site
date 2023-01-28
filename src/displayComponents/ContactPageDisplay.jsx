@@ -1,9 +1,12 @@
 import React from "react"
-
+import ContactForm from "../components/appComponents/ContactForm"
+import "../styles/cssFiles/ContactPage.css"
 export default function ContactPageDisplay(props){
     return(
-        <>
-            <ContactForm/>
-        </>
+        <div id="backgroundContainer">
+            <div>
+                <ContactForm/>
+            </div>
+        </div>
     )
 }

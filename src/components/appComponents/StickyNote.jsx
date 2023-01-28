@@ -1,11 +1,9 @@
 import React from "react"
-
+import Button from "./Button"
 export default function StickyNote(props){
     return(
         <>
-            <a href="#">
-                <span>ENTER</span>
-            </a>
+            <Button buttonText="enter"/>
         </>
     )
 }
