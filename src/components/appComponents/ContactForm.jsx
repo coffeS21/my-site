@@ -20,43 +20,73 @@ export default function ContactForm(props){
     return(
         <div>
              <form ref={form} onSubmit={sendEmail}>
-
               <div>
-                <input
-                type="text"
-                name="company"
-                className="formInput"
-                />
-                 <input
-                type="text"
-                name="name"
-                className="formInput"
-                /> 
+
+                <label>
+                  <div>
+                    <p>name</p>
+                  </div>
+                  <div>
+                    <input
+                    type="text"
+                    name="company"
+                    className="formInput"
+                    />
+                  </div>
+                </label>
+                <label>
+                  <div>
+                    <p>company</p>
+                  </div>
+                  <div>
+                    <input
+                    type="text"
+                    name="company"
+                    className="formInput"
+                    />
+                  </div>
+                </label>
+                <label>
+                  <div>
+                     <p>email</p>
+                  </div>
+                  <div>
+                    <input
+                    type="email"
+                    name="email"
+                    className="formInput"
+                    />
+                  </div>
+                </label>
+                <label>
+                  <div>
+                    <p>phone</p>
+                  </div>
+                  <div>
+                    <input
+                    type="phone"
+                    name="phone"
+                    className="formInput"
+                    />
+                  </div>
+                </label>
+                <label>
+                  <div>
+                    <p>message</p>
+                  </div>
+                  <div>
+                    <textarea
+                    type="text"
+                    name="phone"
+                    id="message"
+                    placeholder="send me a message!"
+                    />
+                  </div>
+                </label>
+                <div id="subButton">
+                  <Button  buttonText="SUBMIT"/>
+                </div>
               </div>
-
-              {/* <div>
-                <input
-                type="email"
-                placeholder="email"
-                name="email"
-                required
-                />
-                <input
-                type="phone"
-                name="phone"
-                placeholder="phone number"
-                />
-              </div>
-
-              <div>
-                <textarea
-                type="text"
-                name="message"
-                placeholder="message"
-                />
-                <Button buttonText="submit"/>
-              </div> */}
-
              </form>
         </div>
     )

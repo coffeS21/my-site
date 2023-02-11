@@ -4,9 +4,9 @@ import "../styles/cssFiles/ContactPage.css"
 export default function ContactPageDisplay(props){
     return(
         <div id="backgroundContainer">
-            <div>
-                <ContactForm/>
-            </div>
+              <div id="formContainer">
+                    <ContactForm/>
+            </div>  
         </div>
     )
 }

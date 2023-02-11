@@ -1,0 +1,105 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: stickyFont;
+  src:url("../fonts/colored pencils.ttf");
+}
+
+#noteContainer{
+  width: 190px;
+  height: 190px;
+  background-color: transparent;
+  color: rgb(84, 82, 85);
+  margin-top: 100px;
+  margin-right: 30px;
+  transform: rotate(-14deg);
+  
+}
+#stickyOuter {
+  display: flex;
+  padding-top: 92.5925926%;
+  position: relative;
+  width: 100%;
+}
+#sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* Shadow behind the sticky note */
+#sticky:before {
+  transform: rotate(-14deg);
+  box-shadow: -2px -8px 15px 0 rgba(83, 82, 82, 0.5);
+  background-color: rgba(83, 82, 82, 0.24);
+  content: '';
+  width: 90%;
+  left: 5px;
+  height: 83%;
+  position: absolute;
+  top: 30%;
+}
+/* The sticky note itself rgb(119, 230, 29)*/
+#stickyContent {
+  display: flex;
+  flex-direction: column;
+
+  transform: rotate(-14deg);
+  background: linear-gradient(
+  180deg,
+  rgba(119, 230, 29, 1) 0%,
+  rgba(119, 230, 29, 1) 12%,
+  rgba(119, 230, 29, 1) 75%,
+  rgba(119, 230, 29, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  font-family: 'Kalam', cursive;
+  font-size: 1rem;
+  clip-path: url(#stickyClip);
+}
+#borderBox{
+  /* background-color: rgba(94, 169, 201, 0.089); */
+  border-bottom: 2px solid rgba(120, 122, 122, 0.096);
+  border-bottom-width: thin;
+  height: 40px;
+  text-align: center;
+  font-size: 12px;
+  font-family: stickyFont;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#buttonContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  transform: rotate(24deg);
+}
+#buttonContainer a {
+  position: relative;
+  float: left;
+  font-family: headerFont;
+  margin-right: 10px;
+  text-transform: uppercase;
+  transform: rotateZ(-6deg);
+  color: #000;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: -3px -2px 3px  #0000008c;
+  transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
+  background-image: url('data:image/gif;base64,R0lGODlhBAAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NUY1OENCRDdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NUY1OENCRTdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk1RjU4Q0JCN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk1RjU4Q0JDN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAQABAAAAgYEEpdoeQUAOw==');
+}
+#buttonContainer a {
+  background:rgb(159,156,161); 
+  display: block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid rgba(120, 122, 122, 0.096);
+}
